@@ -2,10 +2,27 @@
   "name": "rest_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "jest": {
+    "verbose": true,
+    "testSequencer": "/home/carolina/desenvolvimento/rest_api/jest-supertest/testSequencer.js",
+    "coverageDirectory": "/home/carolina/desenvolvimento/rest_api/jest-supertest/coverage/reports/",
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "scripts": {
-    "start": "node ./index.js",
-    "test": "jest --env node",
+    "start": "node ./server.js",
+    "test": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --reporters default jest-stare --coverage --detectOpenHandles --runInBand --testTimeout=60000",
     "test:watch": "jest --verbose --watchAll"
   },
   "author": "",
@@ -21,6 +38,7 @@
     "jest": "^26.6.3",
     "jest-serial-runner": "^1.1.0",
     "jest-stare": "^2.2.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }

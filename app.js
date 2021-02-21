@@ -7,4 +7,4 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use('/', require('./src/route/pessoaRoute'))
 
-app.listen(3000)
+module.exports = app

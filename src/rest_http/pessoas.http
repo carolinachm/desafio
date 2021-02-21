@@ -11,16 +11,16 @@ POST http://{{host}}/pessoas
 Content-Type: :{{contentType}}
 
 {
-  
+  "pessoa_id": "1",
   "nome": "jao",
   "dataNascimento": "12/02/1258",
   "cpf": "123456789",
   "ativo": "true",
-  "meta": "1250"
+  "meta": 10000
 }
 
 ###
-DELETE  http://{{host}}/pessoas/69
+DELETE  http://{{host}}/pessoas/88
 Content-Type: :{{contentType}}
 
 
